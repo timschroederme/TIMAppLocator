@@ -13,7 +13,6 @@
 - (void)queryFinished:(NSNotification *)notification
 {
     NSMetadataQuery *aQuery = [notification object];
-    NSLog (@"%@", aQuery);
     
     // Check query for results and extract paths
     NSMutableArray *paths;
