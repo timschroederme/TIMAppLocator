@@ -3,7 +3,7 @@ TIMAppLocator is a tiny Cocoa class for getting the file paths of all instances 
 ###How does it work
 TIMAppLocator uses a file system metadata query to find all instances of an application, identified by its bundle identifier, which are installed on your local system. It does so in a way very similar to typing 
 
-> mdfind "kMDItemCFBundleIdentifier == 'com.apple.Safari"
+> mdfind "kMDItemCFBundleIdentifier == 'com.apple.Safari'"
 
 at the command line. 
 
