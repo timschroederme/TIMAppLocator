@@ -18,7 +18,7 @@ Don’t forget to include the protocol in your class definition, e.g. like this:
 
 	@interface AppDelegate : NSObject <NSApplicationDelegate, TIMAppLocatorProtocol>
 
-The TIMAppLocator instance will call its delegate once it has finished gathering the locations of where the application associated with the bundle identifier, passing them on in an array of file paths:
+The TIMAppLocator instance will call its delegate once it has finished gathering the locations of the application associated with the bundle identifier, passing them on in an array of NSString instances containing the file paths:
 
 	-(void)appLocations:(NSArray*)locations;
 
