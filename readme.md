@@ -1,13 +1,17 @@
+# TIMAppLocator
+
 TIMAppLocator is a tiny Cocoa class for getting the file paths of all instances of an application identified by its bundle identifier that exist on your local system. It needs Spotlight to be enabled in order to work (which it is by default) and at least Xcode 4.4 and OS X 10.7. 
 
-###How does it work
+# How does it work
+
 TIMAppLocator uses a file system metadata query to find all instances of an application, identified by its bundle identifier, which are installed on your local system. It does so in a way very similar to typing 
 
 > mdfind "kMDItemCFBundleIdentifier == 'com.apple.Safari'"
 
 at the command line. 
 
-###How to use it
+# How to use it
+
 Drop the class and the protocol declaration into your project and use the TIMAppLocator object like this:
 
 	TIMAppLocator *appLocator = [[TimAppLocator alloc] init];
@@ -24,7 +28,7 @@ The TIMAppLocator instance will call its delegate once it has finished gathering
 
 If something goes wrong while initializing the object, the *locateAppWithBundleIdentifier* method will return NO. If no installation of the application associated with the bundle identifier was found, the *appLocations* method will pass on *nil* instead of an array.
 
-###License
+# License
 
 Copyright (c) 2013 Tim Schröder
 
